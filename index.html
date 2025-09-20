@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>CLOCK PROGRAM</h1> <img src="clocklogo.webp" alt="logo" class="logo">
+    </header>
+    <nav>
+        <button id="Analog">Analog Clock</button>
+        <button id="Timer">Timer</button>
+        <button id="stopWatch">Stopwatch</button>
+        <button id="Alarm">Alarm</button>
+    </nav>
+    <div class="container">
+        <div class="Analog-Watch active">
+            <div class="screen">
+                <div class="analog">
+                    <img src="analogClock.png" alt="analogClock" class="clock">
+                    <div class="hour"></div>
+                    <div class="minute"></div>
+                    <div class="seconds"></div>
+                </div>
+                <div class="digital">
+                    <div class="digitalHour"></div>
+                    <div class="digitalMinute"></div>
+                    <div class="digitalSecond"></div>
+                </div>
+            </div>
+        </div>
+        <div class="Timer-Watch hidden">
+            <div class="screen">
+                <div>
+                    <input type="number" class="timerHour change" value="00" min="00" max="24">
+                    <input type="number" class="timerMinute change" value="00" min="00" max="60">
+                    <input type="number" class="timerSecond change" value="00" min="00" max="60">
+                </div>
+                <button id="setTimer">Set Time</button>
+            </div>
+        </div>
+        <div class="stopWatch-Watch hidden">
+            <div class="screen">
+                <p class="stopDisplay">00:00:00:00</p>
+                <div class="buttons">
+                    <button id="start">Start</button>
+                    <button id="stop">Stop</button>
+                    <button id="reset">Reset</button>
+                </div>
+            </div>
+        </div>
+        <div class="Alarm-Watch hidden">
+            <div class="screen">
+                <input type="datetime-local" id="alarmDate">
+                <button id="dateButton">Set Alarm</button>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
